@@ -1,0 +1,30 @@
+<%- include('./partials/head') %>
+<body>
+    <div class="cadastro">
+        <h1> Cadastro </h1>
+    
+        <form action="/cadastro/save" method="POST">
+          
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" placeholder="Insira seu nome" required>
+        
+            <br><br>
+          
+            <label for="email">Email</label>  
+            <input type="email" name="email" placeholder= "Insira seu Email" required>
+        
+            <br><br>
+        
+            <label for="idade">Senha</label>
+            <input type="password" name="senha" placeholder="******" required>
+          
+            <br><br>
+          
+            <button type="submit">Cadastrar</button>
+        
+        </form>
+  
+    </div>
+</body>
+
+</html>

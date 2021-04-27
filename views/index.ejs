@@ -3,42 +3,29 @@
 <body>
     <div class="container">
         <h1>Deseja se cadastrar ?</h1>
-        <a href="#" class="button" id="button">Cadastrar</a>
+        <a href="/cadastro" class="button" id="button">Cadastrar</a>
         <br><br><br>
         <a href="#" class="button" id="button">Ir para o site</a>
     </div>
-    <div class="popup">
+    
+    <form class="popup">
         <div class="popup-content">
             <img src="./img/close.png" alt="Close" class="close" id="close">
             <div>
-                <input type="text" placeholder="usuário">
-<br><br>
-                <input type="password" placeholder="senha">
+                <input type="text" placeholder="usuário" name="usuario">
+                <br>
 
+                <input type="email" placeholder="exemplo@exemplo.com" name="email">
+                <br>
+                <input type="password" placeholder="******" name="senha">
+                <br>
             </div class="botao-cadastrar">
-<br><br>
+                    <br><br>
 
-            <a href="#" class="button">CADASTRAR2222</a>
+            <a href="" class="button">CADASTRAR2222</a>
         </div>
         
-    </div>
-    
-
-
-    <script>
-    document.getElementById("button").addEventListener("click", function(){
-        document.querySelector(".popup").style.display = "flex";
-    })
-
-    document.getElementById("close").addEventListener("click", function(){
-        document.querySelector(".popup").style.display = "none";
-    })
-        
-    </script>
-
-
-
-
+    </form>
 </body>
 
 </html>
