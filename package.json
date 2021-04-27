@@ -1,0 +1,24 @@
+{
+  "name": "projeto_tads",
+  "version": "1.0.0",
+  "description": "Projeto para o curso de Análise e Desenvolvimento de Sistemas UNINOVE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavo-tenorio/Projeto_TADS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavo-tenorio/Projeto_TADS/issues"
+  },
+  "homepage": "https://github.com/gustavo-tenorio/Projeto_TADS#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}

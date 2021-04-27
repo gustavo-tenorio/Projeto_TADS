@@ -1,0 +1,44 @@
+<%- include('./partials/head') %>
+
+<body>
+    <div class="container">
+        <h1>Deseja se cadastrar ?</h1>
+        <a href="#" class="button" id="button">Cadastrar</a>
+        <br><br><br>
+        <a href="#" class="button" id="button">Ir para o site</a>
+    </div>
+    <div class="popup">
+        <div class="popup-content">
+            <img src="./img/close.png" alt="Close" class="close" id="close">
+            <div>
+                <input type="text" placeholder="usuário">
+<br><br>
+                <input type="password" placeholder="senha">
+
+            </div class="botao-cadastrar">
+<br><br>
+
+            <a href="#" class="button">Cadastrar</a>
+        </div>
+        
+    </div>
+    
+
+
+    <script>
+    document.getElementById("button").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "flex";
+    })
+
+    document.getElementById("close").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "none";
+    })
+        
+    </script>
+
+
+
+
+</body>
+
+</html>
