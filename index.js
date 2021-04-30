@@ -16,6 +16,9 @@ app.use(express.static('public'));
 //Banco de Dados
 const connection = require('./database/database');
 const Cadastro = require('./Cadastro/Cadastro');
+const Perguntas = require('./perguntas/perguntas');
+const Admin = require('./admin/admin');
+const Respostas = require('./respostas/respostas');
 
 connection
     .authenticate()
