@@ -28,8 +28,10 @@ connection
         console.log(Error);
     });
 const cadastroController = require('./Cadastro/CadastroController');
+const adminController = require('./Admin/AdminController');
 
 app.use('/',cadastroController);
+app.use('/',adminController);
 
 app.get('/',(req,res)=>{
     res.render('index');
