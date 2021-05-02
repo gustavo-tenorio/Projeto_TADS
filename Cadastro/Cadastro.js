@@ -20,6 +20,6 @@ const Cadastro = connection.define('cadastro',{
     }
 });
 
-Cadastro.sync({force:true});
+Cadastro.sync({force:false});
 
 module.exports = Cadastro;

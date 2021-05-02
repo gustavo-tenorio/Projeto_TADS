@@ -1,5 +1,4 @@
-const { Sequelize } = require('sequelize');
-const sequelize = require('sequelize');
+const Sequelize = require('sequelize');
 const connection = require('../database/database');
 
 const Perguntas = connection.define('perguntas',{
