@@ -5,7 +5,7 @@ const app = express();
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended:true}));
-app.set(bodyParser.json());
+app.use(bodyParser.json());
 
 //VIEW ENGINE === EJS 
 app.set('view engine','ejs');
@@ -27,12 +27,24 @@ connection
     }).catch((Error)=>{
         console.log(Error);
     });
+
+//Session
+const session = require('express-session');
+
+
+app.use(session({
+    secret:'sdlaslkdjasldjsajdasjdlasdmasl', cookie:{maxAge:60000}, resave:false, saveUninitialized:false    
+}));
+
+//Rotas
 const cadastroController = require('./Cadastro/CadastroController');
 const categoriasController = require('./Categorias/CategoriasController');
 const perguntasController = require('./Perguntas/PerguntasController');
+const loginController = require('./Login/LoginController');
 
-//Rotas
+
 app.use('/',cadastroController);
+app.use('/',loginController);
 app.use('/',categoriasController);
 app.use('/',perguntasController);
 
