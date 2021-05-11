@@ -28,9 +28,13 @@ connection
         console.log(Error);
     });
 const cadastroController = require('./Cadastro/CadastroController');
+const categoriasController = require('./Categorias/CategoriasController');
+const perguntasController = require('./Perguntas/PerguntasController');
 
-
+//Rotas
 app.use('/',cadastroController);
+app.use('/',categoriasController);
+app.use('/',perguntasController);
 
 
 app.get('/',(req,res)=>{

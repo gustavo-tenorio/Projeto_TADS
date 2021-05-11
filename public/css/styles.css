@@ -1,13 +1,16 @@
+#index{
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 body,html{
     width:100%;
     height:100%;
     margin:0;
     padding:0;
     text-align: center;
-    background-image: url('../img/background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  
     font-family:sans-serif;
     /*1.5em = 20px*/
 }
