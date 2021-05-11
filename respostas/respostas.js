@@ -3,7 +3,7 @@ const connection = require('../database/database');
 
 const Respostas = connection.define('respostas',{
     resposta:{
-        type:Sequelize.BLOB('medium'),
+        type:Sequelize.TEXT,
         allowNull:false,
         validate: {
             notEmpty: {

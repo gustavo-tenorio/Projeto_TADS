@@ -21,7 +21,7 @@ const Admin = connection.define('admin',{
         }
     },
     senha:{
-        type:Sequelize.TEXT,
+        type:Sequelize.STRING,
         allowNull:false,
         validate: {
             notEmpty: {

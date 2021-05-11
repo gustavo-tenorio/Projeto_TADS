@@ -21,7 +21,7 @@ const Cadastro = connection.define('cadastro',{
         }
     },
     senha:{
-        type:Sequelize.TEXT,
+        type:Sequelize.STRING,
         allowNull:false,
         validate: {
             notEmpty: {

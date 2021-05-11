@@ -1,31 +1,56 @@
 <%- include('./partials/head') %>
-
 <body>
-    <div class="container">
-        <h1>Deseja se cadastrar ?</h1>
-        <a href="/cadastro" class="button" id="button">Cadastrar</a>
-        <br><br><br>
-        <a href="#" class="button" id="button">Ir para o site</a>
+    <div class="wrapper">
+        <h1>Seja bem vindo!</h1>
+        <button onclick="showRegister()">Cadastrar</button>
+        <button onclick="showLogin()">Login</button>
     </div>
+    <div class="wrapper2">
+        <i class="fa fa-arrow-left" onclick="backHomeLogin()"></i>
+        <form action="" method="POST">
+            <h1>Login</h1>
+            <br>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" placeholder="email@exemplo.com" name="email" required>
+            <br>
+            <label for="password">Senha</label>
+            <br>
+            <input type="password" placeholder="********" name="senha" required>
+            <br>
+            <button type="submit">Login</button>
+            <br>
+
+        </form>
+    </div>
+
+    <div class="wrapper3">
+        <i class="fa fa-arrow-left" onclick="backHomeRegister()"></i>
+        <form action="/cadastro/save" method="POST">
+            <h1>Cadastro</h1>
+            <br>
+            <label for="nome">Nome</label>
+            <br>
+            <input type="text" placeholder="Nome Completo" name="nome" required>
+            <br>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" placeholder="email@exemplo.com" name="email" required>
+            <br>
+            <label for="password">Senha</label>
+            <br>
+            <input type="password" placeholder="********" name="senha" required>
+            <br>
+            <button type="submit">Cadastrar</button>
+            <br>
+
+        </form>
+
+    </div>
+
     
-    <form class="popup">
-        <div class="popup-content">
-            <img src="./img/close.png" alt="Close" class="close" id="close">
-            <div>
-                <input type="text" placeholder="usuário" name="usuario">
-                <br>
-
-                <input type="email" placeholder="exemplo@exemplo.com" name="email">
-                <br>
-                <input type="password" placeholder="******" name="senha">
-                <br>
-            </div class="botao-cadastrar">
-                    <br><br>
-
-            <a href="" class="button">CADASTRAR2222</a>
-        </div>
-        
-    </form>
 </body>
+<script src="./js/functions.js"></script>
+
 
 </html>

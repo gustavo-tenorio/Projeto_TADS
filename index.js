@@ -16,10 +16,9 @@ app.use(express.static('public'));
 //Banco de Dados
 const connection = require('./database/database');
 const Cadastro = require('./Cadastro/Cadastro');
-const Perguntas = require('./perguntas/perguntas');
-const Admin = require('./admin/admin');
-const Respostas = require('./respostas/respostas');
-const Categorias = require('./categorias/categorias')
+const Categorias = require('./Categorias/Categorias');
+const Perguntas = require('./Perguntas/Perguntas');
+const Admin = require('./Admin/Admin');
 
 connection
     .authenticate()
@@ -29,19 +28,14 @@ connection
         console.log(Error);
     });
 const cadastroController = require('./Cadastro/CadastroController');
-const adminController = require('./Admin/AdminController');
+
 
 app.use('/',cadastroController);
-app.use('/',adminController);
+
 
 app.get('/',(req,res)=>{
     res.render('index');
 });
-app.get('/cadastro',(req,res)=>{
-    res.render('cadastro');
-})
-
-
 
 
 app.listen('3000',(Error)=>{

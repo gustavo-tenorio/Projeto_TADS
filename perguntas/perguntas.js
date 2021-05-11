@@ -11,8 +11,17 @@ const Perguntas = connection.define('perguntas',{
             }
         }
     },
+    resumo:{
+        type:Sequelize.TEXT,
+        allowNull:false,
+        validate:{
+            notEmpty:{
+                msg: "Esse campo precisa ser preenchido"
+            }
+        }
+    },
     pergunta:{
-        type:Sequelize.BLOB('medium'),
+        type:Sequelize.TEXT,
         allowNull:false,
         validate: {
             notEmpty: {
