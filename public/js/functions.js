@@ -38,3 +38,15 @@ let backHomeRegister = () =>{
 
 
 }
+
+
+
+//Navbar function
+let navBar = () =>{
+    let nav = document.querySelector('.nav');
+    if(nav.className === 'nav'){
+        nav.classList.add('nav-active');
+    }else{
+        nav.classList.remove('nav-active');
+    }
+}

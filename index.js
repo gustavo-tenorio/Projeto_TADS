@@ -41,10 +41,12 @@ const cadastroController = require('./Cadastro/CadastroController');
 const categoriasController = require('./Categorias/CategoriasController');
 const perguntasController = require('./Perguntas/PerguntasController');
 const loginController = require('./Login/LoginController');
+const userController = require('./User/UserController');
 
 
 app.use('/',cadastroController);
 app.use('/',loginController);
+app.use('/',userController);
 app.use('/',categoriasController);
 app.use('/',perguntasController);
 
