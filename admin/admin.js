@@ -31,5 +31,5 @@ const Admin = connection.define('admin',{
     }
 });
 
-Admin.sync({force:false});
+Admin.sync({force:true});
 module.exports = Admin;
