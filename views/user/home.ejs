@@ -4,15 +4,16 @@
     <%- include('../partials/header') %>
     <div class="user">
         <div class="wrapper4">
+            <br>
             <i class="fa fa-user"></i>
             <hr>
             <br>
-            <p>Gustavo Luis de Almeida Tenório</p>
+            <p><%=user.nome%></p>
             <br>
-            <p>gltenorio@hotmail.com</p>
+            <p><%=user.email%></p>
             <br>
             <button class="editar">Editar</button>
-            <button class="logout">Logout</button>
+            <button class="logout"><a href="/logout">Logout</a></button>
         </div>
        
     </div>

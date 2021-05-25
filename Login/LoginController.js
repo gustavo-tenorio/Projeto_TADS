@@ -4,6 +4,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const Cadastro = require('../Cadastro/Cadastro');
 
+//Login
 router.post('/login',(req,res)=>{
     let email = req.body.email;
     let senha = req.body.senha;
@@ -19,13 +20,18 @@ router.post('/login',(req,res)=>{
                    email: usuario.email,
                    id: usuario.id
                 }
-                res.json(req.session.user);
+                res.redirect('/home');
             }else{
                 console.log(Error);
             }
         }
 
     })
+});
+//Logout
+router.get('/logout',(req,res)=>{
+    req.session.user = undefined;
+    res.redirect('/');
 });
 router.get('/session',(req,res)=>{
     res.json(req.session.user);

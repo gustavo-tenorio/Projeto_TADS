@@ -34,8 +34,13 @@ const session = require('express-session');
 
 
 app.use(session({
-    secret:'sdlaslkdjasldjsajdasjdlasdmasl', cookie:{maxAge:60000}, resave:false, saveUninitialized:false    
+    secret:'sdlaslkdjasldjsajdasjdlasdmasl', cookie:{maxAge:600000}, resave:false, saveUninitialized:false    
 }));
+
+app.use(function(req,res,next){
+    res.locals.user = req.session.user;
+    next();
+});
 
 //Rotas
 const cadastroController = require('./Cadastro/CadastroController');
