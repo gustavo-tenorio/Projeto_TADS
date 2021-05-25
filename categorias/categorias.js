@@ -19,5 +19,5 @@ Categorias.hasMany(Perguntas);
 Perguntas.belongsTo(Categorias);
 Respostas.belongsTo(Categorias);
 
-Categorias.sync({force:true});
+Categorias.sync({force:false});
 module.exports = Categorias;

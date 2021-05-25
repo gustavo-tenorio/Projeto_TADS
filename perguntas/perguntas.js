@@ -35,5 +35,5 @@ const Perguntas = connection.define('perguntas',{
 Perguntas.hasMany(Respostas);
 Respostas.belongsTo(Perguntas);
 
-Perguntas.sync({force:true});
+Perguntas.sync({force:false});
 module.exports = Perguntas;

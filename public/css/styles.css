@@ -16,8 +16,10 @@ body,html{
 }
 p{font-size:18px;}h3{font-size:20px;}
 a{text-decoration: none;color:white}button:focus,input:focus{outline:none;}
+button{border:none;}
 ul{list-style:none; padding: 0; margin:0;}
 h1,h2,h3,h4,h5,h6,p{margin:0; padding:0;}
+header{margin:0;padding: 0;}
 /*Tela Inicial (Login, Cadastrar)*/
 @media screen and (min-width:280px){
     .wrapper{
@@ -208,31 +210,63 @@ h1,h2,h3,h4,h5,h6,p{margin:0; padding:0;}
 }
 /*Home*/
 @media screen and (min-width:350px){
-    header{
-        margin:5px;
+    /*header*/
+    .header{
         padding:10px;
         display:flex;
         flex-direction: row;
         justify-content: space-between;
+        background:#1E90FF;
+        color:white;
     }
-    header h1{
+    .header h1{
         font-size:30px;
     }
-    header button{
+    .header button{
         background:none;
-        border: none;
+        cursor: pointer;
+        
     }
-    header .fa-bars{
-        font-size:20px;
+    .btn-header{
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
-    header nav{
+    .btn-header .fa-bars , .btn-header .fa-user{
+        color:white;
+        padding:0px 10px;
+        margin:0px 5px;
+    }
+    /*Informações do usuário*/
+    .user{
+        padding: 10px;
         display:none;
     }
-    .nav-active{
-        display:block;
+    .user-active{
+        display:contents;
     }
-
-
+    .wrapper4{
+        padding:5px;
+       
+    }
+    .wrapper4 i{
+        font-size: 45px;
+    }
+    .wrapper4 p{
+        margin: 5px;
+    }
+    .wrapper4 button{
+        width:100px;
+        background:#1E90FF;
+        padding:5px;
+        border-radius:15px;
+        border:1px solid #1E90FF;
+        color:white;
+        font-size:18px;
+        letter-spacing: 1.2px;
+        margin:0px 10px;
+    }
 }
 
 /* Cadastro de Categorias */
