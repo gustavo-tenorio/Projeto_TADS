@@ -50,3 +50,13 @@ let navBar = () =>{
         nav.classList.remove('nav-active');
     }
 }
+//Funcão para mostrar informações do usuário
+
+let showUser = () =>{
+    let user = document.querySelector('.user');
+    if(user.className === 'user'){
+        user.classList.add('user-active');
+    }else{
+        user.classList.remove('user-active');
+    }
+}

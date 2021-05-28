@@ -16,9 +16,10 @@ app.use(express.static('public'));
 //Banco de Dados
 const connection = require('./database/database');
 const Cadastro = require('./Cadastro/Cadastro');
-const Categorias = require('./Categorias/Categorias');
-const Perguntas = require('./Perguntas/Perguntas');
-const Admin = require('./Admin/Admin');
+const Categorias = require('./categorias/categorias');
+const Perguntas = require('./perguntas/perguntas');
+const Admin = require('./admin/admin');
+const Respostas = require('./respostas/respostas');
 
 connection
     .authenticate()
@@ -33,8 +34,13 @@ const session = require('express-session');
 
 
 app.use(session({
-    secret:'sdlaslkdjasldjsajdasjdlasdmasl', cookie:{maxAge:60000}, resave:false, saveUninitialized:false    
+    secret:'sdlaslkdjasldjsajdasjdlasdmasl', cookie:{maxAge:600000}, resave:false, saveUninitialized:false    
 }));
+
+app.use(function(req,res,next){
+    res.locals.user = req.session.user;
+    next();
+});
 
 //Rotas
 const cadastroController = require('./Cadastro/CadastroController');
