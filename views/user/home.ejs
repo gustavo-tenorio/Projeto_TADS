@@ -2,9 +2,49 @@
 <script src="../js/functions.js"></script>
 <body>
     <%- include('../partials/header') %>
+    <div class="grid">
+      
+    <div class="categrias_base">
+        <div class="categorias_titulo">
+		<h2>Categorias citadas até aqui:</h2>
+        </div>
+        <div class="categorias_format">
+		<p>Categoria x</p>
+        <hr>
+        <p>Categoria x</p>
+        <hr>
+        <p>Categoria x</p>
+        <hr>
+        <p>Categoria x</p>
+        <hr>
+        <p>Categoria x</p>
+        <hr>
+        <p>Categoria x</p>
+        </div>
+    </div>    
+
+    <div class="caixa_perguntas">
+        <div class="titulo_caixa">
+            <h3>Caixa de Perguntas</h3>
+        </div>
+        <div class="fazer_pergunta">
+            <h4>Deseja fazer uma pergunta?</h4>
+            <button class="logout"><a href="/perguntas/new">Fazer Pergunta</a></button>
+        </div>
+
+        <div class="introducao">
+            <h3>Acompanhe e tire as suas dúvidas sobre os mais variados temas!</h3>
+        </div>
+
+        <div class="pergunta_caixa">
+            <p>Nome do usuário</p>
+            <p>Resumo</p>
+        </div>
+    </div>
+
     <div class="user">
+        <div class="user_format">
         <div class="wrapper4">
-            <br>
             <i class="fa fa-user"></i>
             <hr>
             <br>
@@ -15,7 +55,9 @@
             <button class="editar">Editar</button>
             <button class="logout"><a href="/logout">Logout</a></button>
         </div>
-       
+        </div>
     </div>
+
+</div>
 </body>
 </html>
