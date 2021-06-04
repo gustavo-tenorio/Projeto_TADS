@@ -18,16 +18,13 @@
                             <button type="submit">Confirmar </button>            
                         
                             </fieldset>
+                            <select name="categoria">
+                                <% categorias.forEach((categoria) =>{ %>
+                                <option value = "<%= categoria.id %>"><%=categoria.categoria%></option>
+                                <% }) %>
+                             </select>
                     </form>
-                    <div class="categorias">
-                    <select name="select">
-                        <option value="valor1" selected> categoria 1</option>
-                        <option value="valor2">categoria 2</option>
-                        <option value="valor3">categoria 3</option>
-                        <option value="valor4">categoria 4</option>
-                        <option value="valor5">categoria 5</option>
-                        </select>
-                    </div>
+                            
                 </div>
             </section>
         </div>
