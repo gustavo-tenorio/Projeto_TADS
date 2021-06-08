@@ -238,20 +238,22 @@ header{margin:0;padding: 0;}
         padding:0px 8px;
         margin:0px 2px;
     }
-    /*Informações do usuário*/
-    
-    .user_format {
-            position: fixed;
-            right: 0px;
-            border: 1px solid #DCDCDC;
-            border-radius: 20px;
-    }
 
-    .user{
+     /*Informações do usuário*/
+
+    /*.user_format {
         position: fixed;
         right: 0px;
         border: 1px solid #DCDCDC;
         border-radius: 20px;
+    }*/
+
+    .user{
+       display: grid;
+       right: 0px;
+       border: 1px solid #DCDCDC;
+       border-radius: 20px;
+       grid-area: "user";
     }
 
     .user-active{
@@ -259,7 +261,6 @@ header{margin:0;padding: 0;}
     }
     .wrapper4{
         padding:5px;
-       
     }
     .wrapper4 i{
         font-size: 45px;
@@ -278,10 +279,48 @@ header{margin:0;padding: 0;}
         letter-spacing: 1.2px;
         margin:0px 10px;
     }
+
+    /* FORMATAÇÃO DO BOTÃO FAZER PERGUNTA  */
+
+    .format_botao_pergunta{
+        padding:5px;  
+    }
+
+    .format_botao_pergunta i{
+        font-size: 45px;
+    }
+
+    .format_botao_pergunta p{
+        margin: 5px;
+    }
+
+    .format_botao_pergunta button {
+        width:100px;
+        background:#1E90FF;
+        padding:5px;
+        border-radius:15px;
+        border:2px solid #1E90FF;
+        color:white;
+        font-size:18px;
+        letter-spacing: 1.2px;
+        margin:0px 10px;
+    }
+    .format_botao_pergunta :hover{
+        background:#0000FF;
+        border-radius:15px;
+        border:2px solid #00BFFF;
+    }
+
+     .format_botao_pergunta button :hover{
+        border: none;
+    }
+
     /* FORMATAÇÃO DOS CONTEINERS COM GRID */
     .caixa_perguntas {
+        width: 100%;
         background-color: #F8F8FF;
         height: 100%;
+        grid-area: "caixa_perguntas";
     }
     
     .titulo_caixa {
@@ -299,14 +338,9 @@ header{margin:0;padding: 0;}
         margin-top: 5px;
         background-color: #F5FFFA;
     }
-    
-    .fazer_pergunta form{
-        padding-top: 5px;
-    }
-    
-    .fazer_pergunta input{
-        padding: 5px;
-        font-weight: bold;
+
+    .fazer_pergunta h4 {
+        padding-bottom: 7px;
     }
     
     .introducao {
@@ -325,6 +359,11 @@ header{margin:0;padding: 0;}
         text-align: center;
     }
     
+    .categrias_base {
+        width: 100%;
+        grid-area: "categrias_base";
+    }
+
     .categorias_titulo {
         border: 3px solid #708090;
         padding: 10px;
@@ -353,11 +392,27 @@ header{margin:0;padding: 0;}
         margin: 7%;
     }
 
+   .format_footer {
+        width: 100%;
+        grid-area: "format_footer";
+        grid-column: format_footer;
+    }
+
+    .format_footer footer {
+        padding: 10px;
+        height: 20px;
+        background:#1E90FF;
+        color:white;
+    }
+
     .grid {
         margin-top: 5%;
         display: grid;
-        grid-template-columns: 1fr 3fr 1fr; 
-        grid-gap: 40px;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas: 
+        "categrias_base caixa_perguntas user"
+        "format_footer format_footer format_footer"; 
+        grid-gap: 50px;
     }
 }
 /*Home*/
@@ -389,29 +444,29 @@ header{margin:0;padding: 0;}
         padding:0px 10px;
         margin:0px 5px;
     }
+
     /*Informações do usuário*/
 
-    .user_format {
+   /* .user_format {
         position: fixed;
         right: 0px;
         border: 1px solid #DCDCDC;
         border-radius: 20px;
-    }
+    }*/
 
     .user{
-       position: fixed;
+       display: grid;
        right: 0px;
        border: 1px solid #DCDCDC;
        border-radius: 20px;
+       grid-area: "user";
     }
-
 
     .user-active{
         display:contents;
     }
     .wrapper4{
         padding:5px;
-       
     }
     .wrapper4 i{
         font-size: 45px;
@@ -430,10 +485,48 @@ header{margin:0;padding: 0;}
         letter-spacing: 1.2px;
         margin:0px 10px;
     }
+
+    /* FORMATAÇÃO DO BOTÃO FAZER PERGUNTA  */
+
+    .format_botao_pergunta{
+        padding:5px;  
+    }
+
+    .format_botao_pergunta i{
+        font-size: 45px;
+    }
+
+    .format_botao_pergunta p{
+        margin: 5px;
+    }
+
+    .format_botao_pergunta button {
+        width:100px;
+        background:#1E90FF;
+        padding:5px;
+        border-radius:15px;
+        border:2px solid #1E90FF;
+        color:white;
+        font-size:18px;
+        letter-spacing: 1.2px;
+        margin:0px 10px;
+    }
+    .format_botao_pergunta :hover{
+        background:#0000FF;
+        border-radius:15px;
+        border:2px solid #00BFFF;
+    }
+
+     .format_botao_pergunta button :hover{
+        border: none;
+    }
+
     /* FORMATAÇÃO DOS CONTEINERS COM GRID */
     .caixa_perguntas {
+        width: 100%;
         background-color: #F8F8FF;
         height: 100%;
+        grid-area: "caixa_perguntas";
     }
     
     .titulo_caixa {
@@ -451,14 +544,9 @@ header{margin:0;padding: 0;}
         margin-top: 5px;
         background-color: #F5FFFA;
     }
-    
-    .fazer_pergunta form{
-        padding-top: 5px;
-    }
-    
-    .fazer_pergunta input{
-        padding: 5px;
-        font-weight: bold;
+
+    .fazer_pergunta h4 {
+        padding-bottom: 7px;
     }
     
     .introducao {
@@ -477,6 +565,11 @@ header{margin:0;padding: 0;}
         text-align: center;
     }
     
+    .categrias_base {
+        width: 100%;
+        grid-area: "categrias_base";
+    }
+
     .categorias_titulo {
         border: 3px solid #708090;
         padding: 10px;
@@ -505,11 +598,27 @@ header{margin:0;padding: 0;}
         margin: 7%;
     }
 
+   .format_footer {
+        width: 100%;
+        grid-area: "format_footer";
+        grid-column: format_footer;
+    }
+
+    .format_footer footer {
+        padding: 10px;
+        height: 20px;
+        background:#1E90FF;
+        color:white;
+    }
+
     .grid {
         margin-top: 5%;
         display: grid;
-        grid-template-columns: 1fr 3fr 1fr; 
-        grid-gap: 40px;
+        grid-template-areas: 
+        "categrias_base"
+        "caixa_perguntas user"
+        "format_footer format_footer format_footer"; 
+        grid-gap: 50px;
     }
 }
 
