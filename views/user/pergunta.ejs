@@ -1,7 +1,7 @@
 <%- include('../partials/head') %>
 <body>
     <div class="tela-pergunta">
-        <h1 id="Perguntas" style="border-top: none; padding-top: 0;">Faça a sua pergunta:</h1>
+        <h1 id="Perguntas">Faça a sua pergunta:</h1>
         <div class="perguntas" id="perguntas">
             <section class="area-pergunta">
                 <div class="caixa-pergunta">
@@ -9,7 +9,7 @@
                     <form action="/perguntas/save" method="POST">
                         <fieldset>
                         <div class="caixa-pergunta">
-                            <input type="text" name="titulo">
+                            <input type="text" name="titulo" >
                         </div>
                         <br><br>
                         <textarea name="resumo" id="" cols="60" rows="10"></textarea>
