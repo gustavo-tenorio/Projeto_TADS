@@ -1,5 +1,1 @@
-database/
-admin/
-categorias/
-perguntas/
-respostas/
+database/*

@@ -56,7 +56,6 @@ app.use('/',userController);
 app.use('/',categoriasController);
 app.use('/',perguntasController);
 
-
 app.get('/',(req,res)=>{
     res.render('index');
 });

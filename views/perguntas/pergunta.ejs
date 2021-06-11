@@ -1,5 +1,4 @@
 <%- include('../partials/head') %>
-<script src="../js/functions.js"></script>
 <body>
     <%- include('../partials/header') %>
     <div class="home">
@@ -15,22 +14,18 @@
                 </ul>
             </div>
         </div>
-
         <div class="wrapper5">
-            <h2>Perguntas</h2>
-            <button id="btn-perguntar"><a href="/perguntas/new">Faça sua pergunta!</a></button>
-            <hr>
             <div class="perguntas">
-                <% perguntas.forEach(pergunta => {%>
-                    <h3><%=pergunta.titulo%></h3>
-                    <p><%=pergunta.resumo%></p>
-                    <footer class="responder">
-                        <button class="btn-responder"><a href="/<%=pergunta.slug%>">Ver Pergunta</a></button>
-                    </footer>
-                    <hr>
-                <%})%>
+                <h2 style="text-align: center;"><%=perguntas.titulo%></h2>
+                <hr>
+                <p><%=perguntas.pergunta%></p>
+                <form action="">
+                    <textarea name="resposta"></textarea>
+        
+                    <button>Responder</button>
+                </form> 
             </div>
-
+                
         </div>
         <div class="wrapper6">
             <i class="fa fa-user"></i>
@@ -55,9 +50,9 @@
             </div>
 
         </div>
-        
     </div>
     <%- include('../partials/footer') %>
     
+  
 </body>
 </html>

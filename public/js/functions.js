@@ -41,22 +41,16 @@ let backHomeRegister = () =>{
 
 
 
-//Navbar function
-let navBar = () =>{
-    let nav = document.querySelector('.nav');
-    if(nav.className === 'nav'){
-        nav.classList.add('nav-active');
-    }else{
-        nav.classList.remove('nav-active');
-    }
-}
 //Funcão para mostrar informações do usuário
 
 let showUser = () =>{
-    let user = document.querySelector('.user');
-    if(user.className === 'user'){
-        user.classList.add('user-active');
+    let user = document.querySelector('.wrapper6');
+    let perguntas = document.querySelector('.wrapper5');
+    if(user.className === 'wrapper6' && perguntas.className === 'wrapper5'){
+        user.classList.add('wrapper6-active');
+        perguntas.classList.add('wrapper5-off');
     }else{
-        user.classList.remove('user-active');
+        user.classList.remove('wrapper6-active');
+        perguntas.classList.remove('wrapper5-off');
     }
 }

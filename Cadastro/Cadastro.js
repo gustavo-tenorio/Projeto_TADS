@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const connection = require('../database/database');
+const Perguntas = require('../perguntas/perguntas');
 
 const Cadastro = connection.define('cadastro',{
     nome:{
@@ -30,6 +31,7 @@ const Cadastro = connection.define('cadastro',{
         }
     }
 });
+
 
 Cadastro.sync({force:false});
 module.exports = Cadastro;

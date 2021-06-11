@@ -1,9 +1,15 @@
 const express = require('express');
 const router = express.Router();
-
+const Categorias = require('../categorias/categorias');
+const Perguntas = require('../perguntas/perguntas');
 router.get('/home',(req,res)=>{
     let val = req.session.user;
-    res.render('../views/user/home',{user:val});
+    Perguntas.findAll({raw:true}).then(perguntas =>{
+        Categorias.findAll({raw:true}).then(categorias =>{
+            res.render('../views/user/home',{user:val,categorias:categorias,perguntas:perguntas});
+        })
+    })
+   
     
 });
 

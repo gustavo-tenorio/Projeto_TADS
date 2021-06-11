@@ -29,11 +29,16 @@ const Perguntas = connection.define('perguntas',{
                 msg: "Esse campo precisa ser preenchido"
             }
         }
-    }, 
+    },
+    slug:{
+        type:Sequelize.STRING,
+        allowNull:false
+    } 
 });
 
 Categorias.hasMany(Perguntas);
 Perguntas.belongsTo(Categorias);
+
 
 Perguntas.sync({force:false});
 module.exports = Perguntas;
