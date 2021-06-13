@@ -1,12 +1,10 @@
-
-body,html{
+body, html{
     width:100%;
     margin:0;
     padding:0;
     text-align: center;
     height: 100%;
-    font-family:sans-serif;
-    
+    font-family:sans-serif;   
 }
 #index{
     background-image: url('../img/background.png');
@@ -245,6 +243,7 @@ header{margin:0;padding: 0;}
         margin-top:5px;
         width:100%;
         height: 100%;
+        flex-grow: 1;
     }
     /*Categorias*/
     .wrapper4{
@@ -334,7 +333,12 @@ header{margin:0;padding: 0;}
         color:white;
         padding:10px;
         margin-top:10px;
-      
+    }
+
+    .flex{
+        display: flex;
+        min-height: 92.9vh;
+        flex-direction: column;
     }
 }
 @media screen and (min-width:350px){
@@ -367,6 +371,7 @@ header{margin:0;padding: 0;}
         margin-top:5px;
         width:100%;
         height: 100%;
+        flex-grow: 1;
     }
     /*Categorias*/
     .wrapper4{
@@ -449,8 +454,14 @@ header{margin:0;padding: 0;}
         color:white;
         padding:10px;
         margin-top:10px;
-    
-}
+    }
+
+    .flex{
+        display: flex;
+        min-height: 92.9vh;
+        flex-direction: column;
+    }
+
 @media screen and (min-width:500px){
     /*Header*/
     header{
@@ -481,6 +492,7 @@ header{margin:0;padding: 0;}
         margin-top:5px;
         width:100%;
         height: 100%;
+        flex-grow: 1;
     }
     /*Categorias*/
     .wrapper4{
@@ -563,7 +575,12 @@ header{margin:0;padding: 0;}
         color:white;
         padding:10px;
         margin-top:10px;
-        
+    }
+
+    .flex{
+        display: flex;
+        min-height: 92.9vh;
+        flex-direction: column;
     }
 }
 @media screen and (min-width:960px){
@@ -591,6 +608,7 @@ header{margin:0;padding: 0;}
         flex-wrap: row;
         margin-top:5px;
         width:100%;
+        flex-grow: 1;
     }
     /*Categorias*/
     .wrapper4{
@@ -673,7 +691,12 @@ header{margin:0;padding: 0;}
         color:white;
         padding:10px;
         margin-top:10px;
-      
+    }
+
+    .flex{
+        display: flex;
+        min-height: 92.9vh;
+        flex-direction: column;
     }
 }
 /*Página de cada pergunta */
@@ -877,7 +900,7 @@ header{margin:0;padding: 0;}
 /*Perguntas*/
 @media screen and (min-width:350px){
     #perguntas{       
-        margin:5px 5px;
+        margin-top:5px;
     }
     #perguntas form{
         display:flex;
