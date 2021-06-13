@@ -28,9 +28,7 @@ router.post('/perguntas/save',(req,res)=>{
         categoriaId: categorias,
         slug: slugify(titulo)
 
-    });
-
-    res.render('../views/user/home');
+    }).then(res.redirect('/home'));
 })
 router.get('/:slug',(req,res)=>{
     let slug = req.params.slug;
