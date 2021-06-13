@@ -1,23 +1,31 @@
 const express = require('express');
 const router = express.Router();
+const slugify = require('slugify');
 const Categorias = require('./categorias');
-
-router.get('/admin/categorias/new',(req,res)=>{
-    res.render('../views/admin/categorias');
+const Perguntas = require('../perguntas/perguntas');
+const userAuth = require('../middleware/userAuth');
+router.get('/categorias/new',userAuth,(req,res)=>{
+    res.render('../views/user/categorias');
 });
-
-router.get('/admin/categorias',(req,res)=>{
-    Categorias.findAll({raw: true}).then(categorias =>{
-        res.json({categorias})
+router.get('/categorias/:slug',(req,res)=>{
+    let slug = req.params.slug;
+    Categorias.findOne({where:{slug:slug}}).then(categoria =>{
+        if(categoria != undefined){
+            Categorias.findAll().then(categorias =>{
+                Perguntas.findAll({where:{categoriaId : categoria.id}})
+                .then(perguntas =>{
+                    res.render('../views/user/home',{categorias:categorias,perguntas:perguntas});
+                })
+            })
+        }
     })
-    
-})
-
+        
+});
 router.post('/categorias/save',(req,res)=>{
     let categorias = req.body.categoria;
-
     Categorias.create({
         categoria: categorias,
-    }).then(res.json({categorias}));
+        slug:slugify(categorias)
+    }).then(res.redirect('/home'));
 })
 module.exports = router;

@@ -1,19 +1,18 @@
+
+body,html{
+    width:100%;
+    margin:0;
+    padding:0;
+    text-align: center;
+    height: 100%;
+    font-family:sans-serif;
+    
+}
 #index{
     background-image: url('../img/background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
-body,html{
-    width:100%;
-    height:100%;
-    margin:0;
-    padding:0;
-    text-align: center;
-    background-color: #F8F8FF;
-  
-    font-family:sans-serif;
-    
 }
 p{font-size:18px;}h3{font-size:20px;}
 a{text-decoration: none;color:white}button:focus,input:focus{outline:none;}
@@ -22,6 +21,7 @@ input{border:none;}
 ul{list-style:none; padding: 0; margin:0;}
 h1,h2,h3,h4,h5,h6,p{margin:0; padding:0;}
 header{margin:0;padding: 0;}
+.home{background-color: #F8F8FF;}
 /*Tela Inicial (Login, Cadastrar)*/
 @media screen and (min-width:280px){
   
@@ -334,6 +334,7 @@ header{margin:0;padding: 0;}
         color:white;
         padding:10px;
         margin-top:10px;
+      
     }
 }
 @media screen and (min-width:350px){
@@ -448,7 +449,7 @@ header{margin:0;padding: 0;}
         color:white;
         padding:10px;
         margin-top:10px;
-    }
+    
 }
 @media screen and (min-width:500px){
     /*Header*/
@@ -562,6 +563,7 @@ header{margin:0;padding: 0;}
         color:white;
         padding:10px;
         margin-top:10px;
+        
     }
 }
 @media screen and (min-width:960px){
@@ -589,7 +591,6 @@ header{margin:0;padding: 0;}
         flex-wrap: row;
         margin-top:5px;
         width:100%;
-        height: 100%;
     }
     /*Categorias*/
     .wrapper4{
@@ -610,6 +611,11 @@ header{margin:0;padding: 0;}
         color:#1E90FF;
         padding:5px;
         border-radius:15px;
+    }
+    .categorias .btn-categorias{
+        background: #1E90FF;
+        padding: 10px;
+        font-size:15px;
     }
     /*Perguntas*/
     .wrapper5{
@@ -667,34 +673,154 @@ header{margin:0;padding: 0;}
         color:white;
         padding:10px;
         margin-top:10px;
+      
     }
 }
 /*Página de cada pergunta */
 @media screen and (min-width:280px){
+    .home-pergunta{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .wrapper4-pergunta{
+        width:auto;
+    }
+    .wrapper7{
+        margin:0;
+        padding:0;
+        width:auto;
+    }
     .perguntas textarea{
-        height:225px;
-        width:320px;
+        height:150px;
+        width:274px;
+        float:left;
+    }
+    .form-responder .btn-responder{
+        margin-top:10px;
+        background: #1E90FF;
+        padding: 10px;
+        font-size:15px;
+    }
+    .respostas{
+        padding:5px;
+    }
+    .respostas h2{
+        text-align: center;
+    }
+    .resposta{
+        padding: 5px;
+        background: rgba(211,211,211,0.5);
     }
 }
 @media screen and (min-width:350px) {
+    .home-pergunta{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .wrapper4-pergunta{
+        width:auto;
+    }
+    .wrapper7{
+        margin:0;
+        padding:0;
+        width:auto;
+    }
     .perguntas textarea{
-        height:225px;
-        width:320px;
+        height:150px;
+        width:340px;
+        float:left;
+    }
+    .form-responder .btn-responder{
+        margin-top:10px;
+        background: #1E90FF;
+        padding: 10px;
+        font-size:15px;
+    }
+    .respostas{
+        padding:5px;
+    }
+    .respostas h2{
+        text-align: center;
+    }
+    .resposta{
+        padding: 5px;
+        background: rgba(211,211,211,0.5);
     }
 }
 @media screen and (min-width:500px){
+    
+    .wrapper7{
+        width:auto;
+    }
     .perguntas textarea{
-        height:225px;
-        width:320px;
+        height:150px;
+        width:500px;
+        float:left;
+    }
+    .form-responder{
+        width:auto;
+    }
+    .form-responder .btn-responder{
+        margin-top:10px;
+        background: #1E90FF;
+        padding: 10px;
+        font-size:15px;
+    }
+    .respostas{
+        padding:5px;
+    }
+    .respostas h2{
+        text-align: center;
+    }
+    .resposta{
+        padding: 5px;
+        background: rgba(211,211,211,0.5);
+    }
+}
+@media screen and (min-width:600px) {
+    .perguntas textarea{
+        width:100%;
     }
 }
 @media screen and (min-width:960px){
+    .home-pergunta{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .wrapper4-pergunta{
+        width:33%;
+    }
+    .wrapper7{
+        width:33%;
+    }
     .perguntas textarea{
-        height:225px;
-        width:320px;
+        height:150px;
+        width:500px;
+        float:left;
+    }
+    .form-responder{
+        width:auto;
+    }
+    .form-responder .btn-responder{
+        margin-top:10px;
+        background: #1E90FF;
+        padding: 10px;
+        font-size:15px;
+    }
+    .respostas{
+        padding:5px;
+    }
+    .respostas h2{
+        text-align: center;
+    }
+    .resposta{
+        padding: 5px;
+        background: rgba(211,211,211,0.5);
     }
 }
-/* Cadastro de Categorias 
 @media screen and (min-width:280px){
     .body{
        background-image: url("../img/background.png");
@@ -705,7 +831,7 @@ header{margin:0;padding: 0;}
        background-color: rgb(0, 0, 0,.20);
        background-blend-mode: multiply;
     }
-    .categorias{
+    .categorias-cad{
         display:flex;
         flex-direction: column;
         position: absolute;
@@ -730,7 +856,7 @@ header{margin:0;padding: 0;}
     }
 }
 @media screen and (min-width:350px){
-    .categorias {
+    .categorias-cad {
         
         text-align: center;
         border: 40px;
@@ -747,11 +873,10 @@ header{margin:0;padding: 0;}
         left:50%;
         transform:translate(-50% , -50%);
     }
-}*/
+}
 /*Perguntas*/
 @media screen and (min-width:350px){
     #perguntas{       
-        background-color: #D3D3D3;
         margin:5px 5px;
     }
     #perguntas form{
@@ -762,6 +887,7 @@ header{margin:0;padding: 0;}
     #perguntas form input {
         width:300px;
         border-radius:15px;
+        border: 1px solid black;
         padding:10px;
         font-size:18px;
     }
@@ -770,11 +896,13 @@ header{margin:0;padding: 0;}
         width:400px;
         height:200px;
         font-size:18px;
+        border-radius:15px;
     }
     #pergunta{
         width:400px;
         height:350px;
         font-size:18px;
+        border-radius:15px;
     }
     #perguntas form button{
         width:210px;
@@ -792,5 +920,193 @@ header{margin:0;padding: 0;}
         font-size:18px;
     }
 }
-/*teste*/
+}
+/*Edit usuario */
+@media screen and (min-width:280px){
+  
+    .wrapper{
+        color:white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color:rgba(15, 15, 15, 0.38);
+        padding:20px;
+        transform:translate(-50%,-50%);
+        top:50%;
+        left:50%;
+        position: absolute;
+        height:320px;
+        width:230px;
+        border-radius:10px;
+    }
+    .wrapper-desactive{
+        display:none;
+    }
+    .wrapper button{
+        width:210px;
+        background:#1E90FF;
+        padding:5px;
+        border-radius:15px;
+        border:1px solid #1E90FF;
+        color:white;
+        font-size:20px;
+        letter-spacing: 1.2px;
+        margin: 20px;
+    }
 
+    .wrapper2,.wrapper3{
+        color:white;
+        background-color:rgba(15, 15, 15, 0.38);
+        padding:20px;
+        transform:translate(-50%,-50%);
+        top:50%;
+        left:50%;
+        position: absolute;
+        height:350px;
+        width:230px;
+        border-radius:10px;
+        display:none;
+
+    }
+    .wrapper2 i, .wrapper3 i, .wrapper3 i{
+        border:1px solid white;
+        border-radius: 100%;
+        padding:5px;
+        font-size:20px;
+        float: left;
+    }
+    .wrapper2 form, .wrapper3 form{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        color:white;
+        margin:10px;
+    }
+    .wrapper2 form h1, .wrapper3 form h1{
+        letter-spacing: 1.3px;
+    }
+    .wrapper2 form label, .wrapper3 form label{
+        font-size:25px;
+        letter-spacing: 1.2px;
+    }
+    .wrapper2 input, .wrapper3 input{
+        border:1px solid gray;
+        border-radius:15px;
+        height:20px;
+        width:200px;
+        padding:5px;
+    }
+    .wrapper2 button, .wrapper3 button{
+        width:210px;
+        background:#1E90FF;
+        padding:5px;
+        border-radius:15px;
+        border:1px solid #1E90FF;
+        color:white;
+        font-size:20px;
+        letter-spacing: 1.2px;
+    }
+    .wrapper2-active{
+        display:block;
+    }
+    .wrapper3{
+        height:430px;
+    }
+    .wrapper3-active{
+        display:block;
+    }
+}
+
+@media screen and (min-width:350px){
+    .wrapper{
+        color:white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color:rgba(15, 15, 15, 0.38);
+        padding:20px;
+        transform:translate(-50%,-50%);
+        top:50%;
+        left:50%;
+        position: absolute;
+        height:350px;
+        width:300px;
+        border-radius:10px;
+    }
+    .wrapper-desactive{
+        display:none;
+    }
+    .wrapper button{
+        width:210px;
+        background:#1E90FF;
+        padding:5px;
+        border-radius:15px;
+        border:1px solid #1E90FF;
+        color:white;
+        font-size:20px;
+        letter-spacing: 1.2px;
+        margin: 20px;
+    }
+    .wrapper2,.wrapper3{
+        color:white;
+        background-color:rgba(15, 15, 15, 0.38);
+        padding:20px;
+        transform:translate(-50%,-50%);
+        top:50%;
+        left:50%;
+        position: absolute;
+        height:350px;
+        width:300px;
+        border-radius:10px;
+        display:none;
+
+    }
+    .wrapper2 i, .wrapper3 i{
+        border:1px solid white;
+        border-radius: 100%;
+        padding:5px;
+        font-size:20px;
+        float: left;
+    }
+    .wrapper2 form, .wrapper3 form{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        color:white;
+        margin:10px;
+    }
+    .wrapper2 form h1, .wrapper3 form h1{
+        letter-spacing: 1.3px;
+    }
+    .wrapper2 form label, .wrapper3 form label{
+        font-size:25px;
+        letter-spacing: 1.2px;
+    }
+    .wrapper2 input, .wrapper3 input{
+        border:1px solid gray;
+        border-radius:15px;
+        height:20px;
+        width:200px;
+        padding:5px;
+    }
+    .wrapper2 button, .wrapper3 button{
+        width:210px;
+        background:#1E90FF;
+        padding:5px;
+        border-radius:15px;
+        border:1px solid #1E90FF;
+        color:white;
+        font-size:20px;
+        letter-spacing: 1.2px;
+    }
+    .wrapper2-active{
+        display:block;
+    }
+    .wrapper3{
+        height:430px;
+    }
+    .wrapper3-active{
+        display:block;
+    }
+
+}

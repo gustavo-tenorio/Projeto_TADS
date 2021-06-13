@@ -11,7 +11,12 @@ const Categorias = connection.define('categorias',{
             }
         }
     },
+    slug:{
+        type:Sequelize.STRING,
+        allowNull:false
+    }
 });
 
 Categorias.sync({force:false});
+
 module.exports = Categorias;

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Categorias = require('../categorias/categorias');
 const Perguntas = require('../perguntas/perguntas');
+const Cadastro = require('../Cadastro/Cadastro');
 router.get('/home',(req,res)=>{
     let val = req.session.user;
     Perguntas.findAll({raw:true}).then(perguntas =>{

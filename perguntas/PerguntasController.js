@@ -2,8 +2,12 @@ const express = require('express');
 const router = express.Router();
 const Categorias = require('../categorias/categorias');
 const Perguntas = require('../perguntas/perguntas');
+const Respostas = require('../respostas/respostas');
 const slugify = require('slugify');
-router.get('/perguntas/new',(req,res)=>{
+const userAuth = require('../middleware/userAuth');
+
+
+router.get('/perguntas/new',userAuth,(req,res)=>{
     Categorias.findAll({
         raw: true
     }).then(categorias => {
@@ -24,18 +28,23 @@ router.post('/perguntas/save',(req,res)=>{
         categoriaId: categorias,
         slug: slugify(titulo)
 
-    }).then(res.redirect('/home'));
-})
+    });
 
+    res.render('../views/user/home');
+})
 router.get('/:slug',(req,res)=>{
     let slug = req.params.slug;
     Categorias.findAll({raw:true}).then(categorias =>{
         Perguntas.findOne({where:{slug:slug}}).then(pergunta =>{
             if(pergunta != undefined){
-                res.render('../views/perguntas/pergunta',{perguntas: pergunta,categorias:categorias});
+                Respostas.findAll({where:{perguntaId : pergunta.id}}).then(respostas =>{ 
+                    res.render('../views/perguntas/pergunta',{perguntas: pergunta,categorias:categorias,respostas:respostas});
+                })
+                
             }
         });
     });
    
 });
+
 module.exports = router;

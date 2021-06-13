@@ -15,11 +15,6 @@ app.use(express.static('public'));
 
 //Banco de Dados
 const connection = require('./database/database');
-const Cadastro = require('./Cadastro/Cadastro');
-const Categorias = require('./categorias/categorias');
-const Perguntas = require('./perguntas/perguntas');
-const Admin = require('./admin/admin');
-const Respostas = require('./respostas/respostas');
 
 connection
     .authenticate()
@@ -42,12 +37,16 @@ app.use(function(req,res,next){
     next();
 });
 
+
+
 //Rotas
 const cadastroController = require('./Cadastro/CadastroController');
 const categoriasController = require('./Categorias/CategoriasController');
 const perguntasController = require('./Perguntas/PerguntasController');
 const loginController = require('./Login/LoginController');
 const userController = require('./User/UserController');
+const respostasController = require('./respostas/RespostasController');
+
 
 
 app.use('/',cadastroController);
@@ -55,12 +54,12 @@ app.use('/',loginController);
 app.use('/',userController);
 app.use('/',categoriasController);
 app.use('/',perguntasController);
+app.use('/',respostasController);
+
 
 app.get('/',(req,res)=>{
     res.render('index');
-});
-
-
+})
 app.listen('3000',(Error)=>{
     if(Error){
         console.log(Error);

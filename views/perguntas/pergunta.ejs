@@ -1,8 +1,13 @@
 <%- include('../partials/head') %>
 <body>
-    <%- include('../partials/header') %>
-    <div class="home">
-        <div class="wrapper4">
+    <header>
+    
+        <ul>
+            <li><h1><a href="/home">Guia Perguntas</a></h1></li>
+        </ul>
+    </header>
+    <div class="home home-pergunta">
+        <div class="wrapper4 wrapper4-pergunta">
             <h2>Categorias</h2>
             <hr>
             <div class="categorias">
@@ -14,43 +19,41 @@
                 </ul>
             </div>
         </div>
-        <div class="wrapper5">
+        <div class="wrapper5 wrapper7">
             <div class="perguntas">
-                <h2 style="text-align: center;"><%=perguntas.titulo%></h2>
+                <h2><%=perguntas.titulo%></h2>
                 <hr>
                 <p><%=perguntas.pergunta%></p>
-                <form action="">
-                    <textarea name="resposta"></textarea>
-        
-                    <button>Responder</button>
-                </form> 
+                <div class="form-responder">
+                    <form action="/resposta/save" method="POST">
+                  
+                        <textarea name="resposta" placeholder="Digite aqui sua resposta"></textarea>
+                        <br>
+                        <input type="hidden" value="<%=perguntas.id%>" name="id">
+                        
+                        <button type="submit" class="btn-responder"><a>Responder</a></button>
+                </form>
+                <br> 
+                <div class="respostas">
+                    <h2>Respostas</h2>
+                    <hr>
+                    <% respostas.forEach((resposta)=>{%> 
+                        <div class="resposta">
+                            <p><%=resposta.resposta%></p>
+                        </div>
+                        
+                        <br>
+                        <hr>
+                    <%})%>
+                </div>
+                </div>
             </div>
                 
         </div>
-        <div class="wrapper6">
-            <i class="fa fa-user"></i>
-            <hr>
-            <h3>Informações do usuário</h3>
-            <div class="user">
-                <br>
-            <% if(user === undefined){ %>
-                <h4>Por favor, faça o login ou cadastre-se</h4>
-                <br>
-                <button class="btn-user"><a href="/">Login/Cadastro</a></button>
-            <%}else{%>
-                <br>
-                <p><%=user.nome%></p>
-                <br>
-                <p><%=user.email%></p>
-                <br>
-                <button class="btn-user"><a href="">Editar</a></button>
-                <button class="btn-user"><a href="/logout">Logout</a></button>
-            <%}%>
-               
-            </div>
-
-        </div>
+        
     </div>
+   
+   
     <%- include('../partials/footer') %>
     
   

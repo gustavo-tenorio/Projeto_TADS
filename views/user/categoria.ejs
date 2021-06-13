@@ -9,11 +9,10 @@
             <div class="categorias">
                 <ul>
                 <% categorias.forEach((categoria) => {%> 
-                    <li><a href="/categorias/<%=categoria.slug%>"><i><%=categoria.categoria%></i></a></li>
+                    <li><i><%=categoria.categoria%></i></li>
                 <%})%>
                    
                 </ul>
-                <button class="btn-categorias"><a href="/categorias/new">Nova Categoria</a></button>
             </div>
         </div>
 
@@ -33,32 +32,10 @@
             </div>
 
         </div>
-        <div class="wrapper6">
-            <i class="fa fa-user"></i>
-            <hr>
-            <h3>Informações do usuário</h3>
-            <div class="user">
-                <br>
-            <% if(user === undefined){ %>
-                <h4>Por favor, faça o login ou cadastre-se</h4>
-                <br>
-                <button class="btn-user"><a href="/">Login/Cadastro</a></button>
-            <%}else{%>
-                <br>
-                <p><%=user.nome%></p>
-                <br>
-                <p><%=user.email%></p>
-                <br>
-                <button class="btn-user"><a href="/logout">Logout</a></button>
-            <%}%>
-               
-            </div>
-
-        </div>
+       
         
     </div>
     <%- include('../partials/footer') %>
-    
     
 </body>
 </html>
