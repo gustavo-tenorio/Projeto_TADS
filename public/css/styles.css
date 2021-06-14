@@ -265,6 +265,11 @@ header{margin:0;padding: 0;}
         border-radius:15px;
         font-size: 15px;
     }
+    .categorias .btn-categorias{
+        background: #1E90FF;
+        padding: 10px;
+        font-size:15px;
+    }
     /*Perguntas*/
     .wrapper5{
         padding:5px;
@@ -392,6 +397,11 @@ header{margin:0;padding: 0;}
         padding:5px;
         border-radius:15px;
     }
+    .categorias .btn-categorias{
+        background: #1E90FF;
+        padding: 10px;
+        font-size:15px;
+    }
     /*Perguntas*/
     .wrapper5{
         padding:5px;
@@ -512,6 +522,11 @@ header{margin:0;padding: 0;}
         color:#1E90FF;
         padding:5px;
         border-radius:15px;
+    }
+    .categorias .btn-categorias{
+        background: #1E90FF;
+        padding: 10px;
+        font-size:15px;
     }
     /*Perguntas*/
     .wrapper5{
