@@ -3,7 +3,7 @@ Projeto para o curso de Análise e Desenvolvimento de Sistemas UNINOVE
 
 # Projeto Prátco em Sistemas
 
-Integrantes do grupo:
+- Integrantes do grupo:
 
 Nome: Benjamin Ndayigu Mambidibo RA: 3020100653
 
